@@ -38,3 +38,6 @@
 
     // navwalker menu setup
     require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+
+    // add customizer
+    require get_template_directory() . '/inc/customizer.php';

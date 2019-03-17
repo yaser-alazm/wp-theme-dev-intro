@@ -1,5 +1,6 @@
 <?php get_header() ?>
 
+<?php if(true === get_theme_mod('enable_heading')): ?>
   <!-- Masthead -->
   <header class="masthead text-white text-center">
     <div class="overlay"></div>
@@ -23,7 +24,7 @@
       </div>
     </div>
   </header>
-
+<?php endif; ?>
   <!-- Icons Grid -->
   <section class="features-icons bg-light text-center">
     <div class="container">
