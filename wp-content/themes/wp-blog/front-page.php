@@ -7,24 +7,23 @@
     <div class="container">
       <div class="row">
         <div class="col-xl-9 mx-auto">
-          <h1 class="mb-5">Build a landing page for your business or project and generate more leads!</h1>
+          <h1 class="mb-5"><?php echo get_theme_mod('heading_text', 'Heading Title Text') ?></h1>
         </div>
         <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-          <form>
-            <div class="form-row">
-              <div class="col-12 col-md-9 mb-2 mb-md-0">
-                <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
-              </div>
-              <div class="col-12 col-md-3">
-                <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button>
-              </div>
-            </div>
-          </form>
+          <p class="lead"><?php echo get_theme_mod('heading_desc', 'This is a description fot the heading section, This is a description fot the heading section, This is a description fot the heading section, This is a description fot the heading section') ?></p>
         </div>
       </div>
+      <?php if(true === get_theme_mod('enable_button')): ?>
+        <div class="masthead-btn">
+          <a href="<?php echo get_theme_mod(
+            'button_link', 'http://yaser-alazm.com') ?>" class="btn btn-primary"><?php echo get_theme_mod('button_text', 'Button Title') ?></a>
+        </div>
+      <?php endif; ?>
     </div>
   </header>
 <?php endif; ?>
+
+<?php if(true === get_theme_mod('enable_features')): ?>
   <!-- Icons Grid -->
   <section class="features-icons bg-light text-center">
     <div class="container">
@@ -32,10 +31,10 @@
         <div class="col-lg-4">
           <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
             <div class="features-icons-icon d-flex">
-              <i class="icon-screen-desktop m-auto text-primary"></i>
+              <i class="fa <?php echo get_theme_mod('f1_icon', 'fa-facebook'); ?> m-auto text-primary"></i>
             </div>
-            <h3>Fully Responsive</h3>
-            <p class="lead mb-0">This theme will look great on any device, no matter the size!</p>
+            <h3><?php echo get_theme_mod('f1_text', 'Feature 1 Title') ?></h3>
+            <p class="lead mb-0"><?php echo get_theme_mod('f1_desc', 'This is a description fot the heading section, This is a description fot the heading section') ?></p>
           </div>
         </div>
         <div class="col-lg-4">
@@ -59,7 +58,7 @@
       </div>
     </div>
   </section>
-
+<?php endif; ?>
   <!-- Image Showcases -->
   <section class="showcase">
     <div class="container-fluid p-0">
@@ -142,57 +141,8 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
-          <ul class="list-inline mb-2">
-            <li class="list-inline-item">
-              <a href="#">About</a>
-            </li>
-            <li class="list-inline-item">&sdot;</li>
-            <li class="list-inline-item">
-              <a href="#">Contact</a>
-            </li>
-            <li class="list-inline-item">&sdot;</li>
-            <li class="list-inline-item">
-              <a href="#">Terms of Use</a>
-            </li>
-            <li class="list-inline-item">&sdot;</li>
-            <li class="list-inline-item">
-              <a href="#">Privacy Policy</a>
-            </li>
-          </ul>
-          <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2019. All Rights Reserved.</p>
-        </div>
-        <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
-          <ul class="list-inline mb-0">
-            <li class="list-inline-item mr-3">
-              <a href="#">
-                <i class="fab fa-facebook fa-2x fa-fw"></i>
-              </a>
-            </li>
-            <li class="list-inline-item mr-3">
-              <a href="#">
-                <i class="fab fa-twitter-square fa-2x fa-fw"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fab fa-instagram fa-2x fa-fw"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
 </body>
+
+<?php get_footer() ?>
 
 </html>

@@ -21,20 +21,26 @@ h6 {
 header.masthead {
   position: relative;
   background-color: #343a40;
-  background: url("../img/bg-masthead.jpg") no-repeat center center;
+  /* background: url("../img/bg-masthead.jpg") no-repeat center center; */
   background-size: cover;
   padding-top: 8rem;
   padding-bottom: 8rem;
+  z-index: 100;
 }
 
 header.masthead .overlay {
   position: absolute;
-  background-color: #212529;
+  /* background-color: #212529; */
   height: 100%;
   width: 100%;
   top: 0;
   left: 0;
-  opacity: 0.3;
+  z-index: -10;
+  /* opacity: 0.3; */
+}
+
+header.masthead .masthead-btn {
+  z-index: 10;
 }
 
 header.masthead h1 {
@@ -105,7 +111,7 @@ header.masthead h1 {
 .call-to-action {
   position: relative;
   background-color: #343a40;
-  background: url("../img/bg-masthead.jpg") no-repeat center center;
+  background: url('../img/bg-masthead.jpg') no-repeat center center;
   background-size: cover;
   padding-top: 7rem;
   padding-bottom: 7rem;

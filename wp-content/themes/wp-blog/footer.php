@@ -1,3 +1,4 @@
+  <?php if(!is_front_page()): ?>
     <aside class="col-md-4 blog-sidebar">
       <?php if(is_active_sidebar('about')): ?>
         <?php dynamic_sidebar('about'); ?>
@@ -8,6 +9,7 @@
       <?php endif; ?>
 
     </aside><!-- /.blog-sidebar -->
+  <?php endif; ?>
 
   </div><!-- /.row -->
   <?php if(!is_front_page()): ?>

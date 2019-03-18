@@ -39,5 +39,10 @@
     // navwalker menu setup
     require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 
+    // Include O2 Icon Picker
+    define( 'O2_DIRECTORY', get_template_directory() . '/inc/o2/' );
+    define( 'O2_DIRECTORY_URI', get_template_directory_uri() . '/inc/o2/' );
+    require get_template_directory() . '/inc/o2/controls/icon-picker/icon-picker-control.php';
+
     // add customizer
     require get_template_directory() . '/inc/customizer.php';
