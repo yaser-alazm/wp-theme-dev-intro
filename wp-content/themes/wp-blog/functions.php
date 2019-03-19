@@ -7,7 +7,8 @@
         add_image_size('cat_thumb', 400, 400, true);
 
         register_nav_menus(array(
-            'primary'   => __('Primary Menu')
+            'primary'   => __('Primary Menu'),
+            'social'    => __('Social Menu')
         ));
     }
 
@@ -30,6 +31,15 @@
             'before_widget' => '<div class="p-4">',
             'after_widget'  => '</div>',
             'before_title'  => '<h4 class="font-italic">',
+            'after_title'   => '</h4>'
+        ));
+
+        register_sidebar(array(
+            'name'  => 'Contact Form',
+            'id'    => 'contact',
+            'before_widget' => '<div class="p-4">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h4>',
             'after_title'   => '</h4>'
         ));
     }

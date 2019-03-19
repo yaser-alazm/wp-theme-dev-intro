@@ -119,23 +119,30 @@
 
   <!-- Call to Action -->
   <section class="call-to-action text-white text-center">
+    <div class="mx-auto">
+      <h2 class="mb-4">Ready to get started? Sign up now!</h2>
+    </div>
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
-        <div class="col-xl-9 mx-auto">
-          <h2 class="mb-4">Ready to get started? Sign up now!</h2>
+        <div class="col-md-4 d-flex justify-content-center align-items-center">
+            <?php
+              wp_nav_menu(array(
+                'theme_location'  => 'social',
+                'container_class' => 'social-menu',
+                'menu_class'  =>  'list-unstyled'
+              ))
+            ?>
         </div>
-        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-          <form>
-            <div class="form-row">
-              <div class="col-12 col-md-9 mb-2 mb-md-0">
-                <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
-              </div>
-              <div class="col-12 col-md-3">
-                <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button>
-              </div>
-            </div>
-          </form>
+        <div class="col-md-8 mx-auto">
+            <?php if(is_active_sidebar('contact')): ?>
+              <?php dynamic_sidebar('contact'); ?>
+            <?php else: ?>
+                <p class="lead">(You need to setup a contact form)</p>
+                <p class="lead">If you havn't created a form yet, go to dashboard->contact and create a new one (press add new at the top left)</p>
+                <p class="lead">After creating a form and copy the form shortcode, from your dashboard go to Appearance->Widgets and add a text widget into "Contact Form" sidebar.</p>
+                <p class="lead">In the text widget paste the shortcode you aleady copied from your form and click save. Then you ready to go. </p>
+            <?php endif; ?>
         </div>
       </div>
     </div>

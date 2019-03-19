@@ -115,6 +115,7 @@ header.masthead h1 {
   background-size: cover;
   padding-top: 7rem;
   padding-bottom: 7rem;
+  z-index: 10;
 }
 
 .call-to-action .overlay {
@@ -125,6 +126,16 @@ header.masthead h1 {
   top: 0;
   left: 0;
   opacity: 0.3;
+  z-index: -10;
+}
+
+.call-to-action .menu-item {
+  margin-bottom: 1em;
+}
+
+.call-to-action .menu-item a {
+  text-decoration: none !important;
+  color: white;
 }
 
 footer.footer {
