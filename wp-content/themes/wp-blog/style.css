@@ -43,6 +43,15 @@ h6 {
   }
 }
 
+.blog-header .menu-item a {
+  text-decoration: none !important;
+  margin-right: 1em;
+}
+
+.blog-header .menu-item a i {
+  font-size: 1em !important;
+}
+
 .nav-scroller {
   position: relative;
   z-index: 2;
