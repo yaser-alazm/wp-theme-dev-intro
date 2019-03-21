@@ -11,7 +11,7 @@
         </div>
       </div>
       <?php if(true === get_theme_mod('enable_button')): ?>
-        <div class="masthead-btn">
+        <div class="masthead-btn mt-5">
           <a href="<?php echo get_theme_mod(
             'button_link', 'http://yaser-alazm.com') ?>" class="btn btn-primary"><?php echo get_theme_mod('button_text', 'Button Title') ?></a>
         </div>
