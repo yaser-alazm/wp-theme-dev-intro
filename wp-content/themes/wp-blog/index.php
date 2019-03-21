@@ -24,7 +24,7 @@
     ))
 ?>
 
-  <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+  <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark cat-featured">
     <?php if($featured_post->have_posts()) : ?>
       <?php while($featured_post->have_posts()): $featured_post->the_post() ?>
         <?php get_template_part('content/content-cat-featured') ?>

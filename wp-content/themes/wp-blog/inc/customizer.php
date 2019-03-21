@@ -415,7 +415,7 @@
             'transport'  =>  'refresh'
         ));
 
-        $wp_customize->add_control( 'showcase_enable', array(
+        $wp_customize->add_control( 'enable_showcase', array(
             'label'      => __( 'Enable Showcase Section', 'wp-blog' ),
             'section'    => 'showcase_section',
             'type'       => 'checkbox',
@@ -980,7 +980,7 @@
             .cat-featured {
                 background-color: <?php echo get_theme_mod('blog_fp_bg_color', '#343a40'); ?> !important
             }
-            .cat-featured {
+            .cat-featured, .cat-featured a {
                 color: <?php echo get_theme_mod('blog_fp_font_color', '#ffffff'); ?> !important
             }
 
